@@ -1,0 +1,25 @@
+{
+  "workbench.colorCustomizations": {
+    "titleBar.activeForeground": "#000",
+    "titleBar.inactiveForeground": "#000000CC",
+    "titleBar.activeBackground": "#663399",
+    "titleBar.inactiveBackground": "#442265",
+    "titleBar.border": "#ff8000"
+  },
+
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true
+  },
+
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.showSuggestionsAsSnippets": true,
+
+  "editor.snippetSuggestions": "bottom",
+  "editor.guides.bracketPairs":true,
+}
