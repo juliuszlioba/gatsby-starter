@@ -66,7 +66,7 @@ A quick look at the top-level files and directories in a Gatsby project.
     Clone GIT repository
 
     ```shell
-    git clone --depth 1 -b main https://github.com/juliuszlioba/gatsby-starter new-project-name
+    git clone https://github.com/juliuszlioba/gatsby-starter new-project-name
     ```
 
 1.  **Start developing.**
@@ -85,7 +85,7 @@ A quick look at the top-level files and directories in a Gatsby project.
 
     GraphQL: `http://localhost:8000/___graphql`
 
-1.  **Change repository!**
+1.  **Change repository remote origins!**
 
     ```shell
     git remote rm origin
@@ -94,3 +94,10 @@ A quick look at the top-level files and directories in a Gatsby project.
     git remote -v
     ```
 
+## ⚙ Additional Info
+
+Enviromental variables (.env)
+
+  ```shell
+  GOOGLE_ANALYTICS_ID=
+  ```

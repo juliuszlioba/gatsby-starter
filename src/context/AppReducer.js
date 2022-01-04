@@ -5,9 +5,9 @@ export const initialState = {
   consent_form: false,
   consent_form_settings: false,
   consent_necessary: false,
-  consent_advertising: false,
   consent_performance: false,
-  consent_functional: false,
+  //consent_advertising: false,
+  //consent_functional: false,
 }
 
 export const AppReducer = (state, action) => {
@@ -46,20 +46,20 @@ export const AppReducer = (state, action) => {
     case "revokeConsentNecessary":
       return { ...state, consent_necessary: false }
 
-    case "acceptConsentAdvertising":
-      return { ...state, consent_advertising: true }
-    case "revokeConsentAdvertising":
-      return { ...state, consent_advertising: false }
-
     case "acceptConsentPerformance":
       return { ...state, consent_performance: true }
     case "revokeConsentPerformance":
       return { ...state, consent_performance: false }
 
-    case "acceptConsentFunctional":
-      return { ...state, consent_functional: true }
-    case "revokeConsentFunctional":
-      return { ...state, consent_functional: false }
+    // case "acceptConsentAdvertising":
+    //   return { ...state, consent_advertising: true }
+    // case "revokeConsentAdvertising":
+    //   return { ...state, consent_advertising: false }
+
+    // case "acceptConsentFunctional":
+    //   return { ...state, consent_functional: true }
+    // case "revokeConsentFunctional":
+    //   return { ...state, consent_functional: false }
 
     case "acceptConsentAll":
       return {
@@ -67,18 +67,18 @@ export const AppReducer = (state, action) => {
         consent_form: false,
         consent_form_settings: false,
         consent_necessary: true,
-        consent_advertising: true,
         consent_performance: true,
-        consent_functional: true,
+        //consent_advertising: true,
+        //consent_functional: true,
       }
     case "revokeConsentAll":
       return {
         ...state,
         consent_form: true,
         consent_necessary: false,
-        consent_advertising: false,
         consent_performance: false,
-        consent_functional: false,
+        //consent_advertising: false,
+        //consent_functional: false,
       }
 
     default:

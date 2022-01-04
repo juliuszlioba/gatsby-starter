@@ -2409,6 +2409,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tailwindcss/forms@npm:^0.4.0":
+  version: 0.4.0
+  resolution: "@tailwindcss/forms@npm:0.4.0"
+  dependencies:
+    mini-svg-data-uri: ^1.2.3
+  peerDependencies:
+    tailwindcss: ">=3.0.0 || >= 3.0.0-alpha.1"
+  checksum: 881a80b136f22b3da68323166ddfbcd844841f711d75ce4d64479302ae523ac7c1fe8a3bb57370216e6da69303640d70d543ecdb3ec2086f1ddf428a6c13566f
+  languageName: node
+  linkType: hard
+
 "@tokenizer/token@npm:^0.3.0":
   version: 0.3.0
   resolution: "@tokenizer/token@npm:0.3.0"
@@ -7250,6 +7261,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "gatsby-starter-hello-world@workspace:."
   dependencies:
+    "@tailwindcss/forms": ^0.4.0
     autoprefixer: ^10.4.1
     gatsby: ^4.4.0
     gatsby-plugin-image: ^2.4.0
@@ -7263,6 +7275,7 @@ __metadata:
     react: ^17.0.1
     react-dom: ^17.0.1
     react-helmet: ^6.1.0
+    react-hook-form: ^7.22.5
     react-icons: ^4.3.1
     tailwindcss: ^3.0.8
   languageName: unknown
@@ -10010,7 +10023,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mini-svg-data-uri@npm:^1.4.3":
+"mini-svg-data-uri@npm:^1.2.3, mini-svg-data-uri@npm:^1.4.3":
   version: 1.4.3
   resolution: "mini-svg-data-uri@npm:1.4.3"
   bin:
@@ -12132,6 +12145,15 @@ __metadata:
   peerDependencies:
     react: ">=16.3.0"
   checksum: a4998479dab7fc1c2799eddefb1870a9d881b5f71cfdf97979a9882e42f4bb50402d55335f308f461e735e01a06f46b16cc7b4e6bcb22c7a4a6f85a753c5c106
+  languageName: node
+  linkType: hard
+
+"react-hook-form@npm:^7.22.5":
+  version: 7.22.5
+  resolution: "react-hook-form@npm:7.22.5"
+  peerDependencies:
+    react: ^16.8.0 || ^17
+  checksum: 73c76e132f96f01cf9bd447817dda393c57e04ab65005946cefd96436f5b49bc5fa2b3e24d2d1fa737c7334f971e28aef4f617cf25dbf89d0d019d0cb0b0e41f
   languageName: node
   linkType: hard
 

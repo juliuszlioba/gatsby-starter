@@ -10,8 +10,8 @@ module.exports = {
       white: colors.white,
       gray: colors.neutral,
       yellow: colors.amber,
-      site_primary: "var(--color-site-primary)",
-      site_secondary: "var(-color-site-secondary)",
+      "site-primary": "var(--color-site-primary)",
+      "site-secondary": "var(-color-site-secondary)",
     },
     extend: {
       boxShadow: {
@@ -22,5 +22,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 }
