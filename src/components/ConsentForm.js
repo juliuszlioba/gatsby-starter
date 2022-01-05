@@ -11,6 +11,7 @@ const ConsentForm = () => {
   const [siteData, dispatch] = useAppContext()
   const cookiesConsentForm = siteData.consent_form
   const cookiesPerformance = siteData.consent_performance
+  const { register, handleSubmit } = useForm()
 
   const [cookiesSettingsOpen, setCookiesSettingsOpen] = useState(false)
 
@@ -20,7 +21,6 @@ const ConsentForm = () => {
     setCookie("cookie-performance", true)
     dispatch({ type: "acceptConsentAll" })
   }
-  const { register, handleSubmit } = useForm()
 
   const handleSettingsSave = data => {
     setCookie("cookies", true)

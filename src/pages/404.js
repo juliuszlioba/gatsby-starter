@@ -2,12 +2,12 @@ import React from "react"
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 
-export default function Imprint() {
+export default function Error404() {
   return (
     <Layout>
-      <Seo title="Imprint" />
+      <Seo title="404" noIndex={true} />
       <div className="container m-auto text-center">
-        <div>Imprint page</div>
+        <div>404</div>
       </div>
     </Layout>
   )
