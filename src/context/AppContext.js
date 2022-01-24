@@ -1,6 +1,6 @@
 import React, { useEffect, useContext, useReducer, useMemo } from "react"
-import { AppReducer, initialState } from "./AppReducer"
-import { checkCookie } from "../utils/cookies"
+import { AppReducer, initialState } from "@/context/AppReducer"
+import { checkCookie } from "@/utils/cookies"
 
 //Create Context
 export const AppContext = React.createContext()

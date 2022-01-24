@@ -1,7 +1,7 @@
 import React from "react"
-import Layout from "../components/Layout"
-import Seo from "../components/Seo"
-import { useAppContext } from "../context/AppContext"
+import Layout from "@/components/Layout"
+import Seo from "@/components/Seo"
+import { useAppContext } from "@/context/AppContext"
 
 export default function Home() {
   const [siteData, dispatch] = useAppContext()

@@ -1,6 +1,6 @@
 import React, { useEffect, useCallback } from "react"
-import { useAppContext } from "../context/AppContext"
-import ConsentForm from "./ConsentForm"
+import { useAppContext } from "@/context/AppContext"
+import ConsentForm from "@/components/ConsentForm"
 
 const Layout = ({ children }) => {
   const [siteData, dispatch] = useAppContext()

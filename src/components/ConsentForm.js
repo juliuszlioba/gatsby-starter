@@ -1,9 +1,9 @@
 import React from "react"
-import { useAppContext } from "../context/AppContext"
+import { useAppContext } from "@/context/AppContext"
 import { BiCookie } from "react-icons/bi"
 import { Link } from "gatsby"
 import { useForm } from "react-hook-form"
-import { setCookie } from "../utils/cookies"
+import { setCookie } from "@/utils/cookies"
 import { useState } from "react"
 import { Helmet } from "react-helmet"
 
