@@ -44,7 +44,7 @@ const Layout = ({ children }) => {
   }, [dispatch])
 
   return (
-    <main className="relative flex flex-col w-full min-h-screen bg-white dark:bg-black text-black dark:text-white">
+    <main className="relative flex min-h-screen w-full flex-col bg-white text-black dark:bg-black dark:text-white">
       {children}
       <ConsentForm />
     </main>

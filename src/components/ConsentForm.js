@@ -16,6 +16,7 @@ const ConsentForm = () => {
   const [cookiesSettingsOpen, setCookiesSettingsOpen] = useState(false)
 
   const handleConsentAll = () => {
+    // window[`ga-disable-${process.env.GOOGLE_ANALYTICS_ID}`] = false
     setCookie("cookies", true)
     setCookie("cookie-nessesary", true)
     setCookie("cookie-performance", true)
@@ -29,9 +30,11 @@ const ConsentForm = () => {
 
     if (data.cookiePerformance) {
       setCookie("cookie-performance", true)
+      // window[`ga-disable-${process.env.GOOGLE_ANALYTICS_ID}`] = false
       dispatch({ type: "acceptConsentPerformance" })
     } else {
       setCookie("cookie-performance", false)
+      // window[`ga-disable-${process.env.GOOGLE_ANALYTICS_ID}`] = true
       dispatch({ type: "revokeConsentPerformance" })
     }
 
@@ -60,11 +63,11 @@ const ConsentForm = () => {
         </Helmet>
       )}
       {cookiesConsentForm && (
-        <div className="fixed flex justify-center w-full bottom-0 p-4 z-50">
-          <div className="flex flex-col rounded-md dark:bg-gray-100 bg-gray-800 dark:text-black text-white shadow-lg-flat p-4">
+        <div className="fixed bottom-0 z-50 flex w-full justify-center p-4">
+          <div className="flex flex-col rounded-md bg-gray-800 p-4 text-white shadow-lg-flat dark:bg-gray-100 dark:text-black">
             <div className="flex flex-col md:flex-row">
-              <div className="md:pr-6 mb-4 md:mb-0">
-                <div className="flex flex-row gap-1 items-center text-lg">
+              <div className="mb-4 md:mb-0 md:pr-6">
+                <div className="flex flex-row items-center gap-1 text-lg">
                   <BiCookie />I use Cookies
                 </div>
                 <div>
@@ -95,7 +98,7 @@ const ConsentForm = () => {
               </div>
               <button
                 onClick={handleConsentAll}
-                className="p-4 rounded-md dark:bg-black hover:dark:bg-site-primary dark:text-white hover:dark:text-white bg-white hover:bg-site-primary text-black hover:text-white"
+                className="rounded-md bg-white p-4 text-black hover:bg-site-primary hover:text-white dark:bg-black dark:text-white hover:dark:bg-site-primary hover:dark:text-white"
               >
                 Allow <span className="whitespace-nowrap">all cookies</span>
               </button>
@@ -105,10 +108,10 @@ const ConsentForm = () => {
               <div className="mt-4">
                 <form
                   onSubmit={handleSubmit(handleSettingsSave)}
-                  className="flex flex-col md:flex-row justify-between"
+                  className="flex flex-col justify-between md:flex-row"
                 >
                   <div className="flex flex-col">
-                    <div className="flex flex-row gap-1 items-center text-lg">
+                    <div className="flex flex-row items-center gap-1 text-lg">
                       <BiCookie />
                       Settings
                     </div>
@@ -117,7 +120,7 @@ const ConsentForm = () => {
                         type="checkbox"
                         disabled={true}
                         checked={true}
-                        className="rounded-md focus:ring-4 focus:ring-site-primary bg-gray-100 focus:ring-offset-0 border-transparent focus:border-transparent text-gray-400 mr-2 w-5 h-5"
+                        className="mr-2 h-5 w-5 rounded-md border-transparent bg-gray-100 text-gray-400 focus:border-transparent focus:ring-4 focus:ring-site-primary focus:ring-offset-0"
                       />
                       <span>
                         Nessesary cookies{" "}
@@ -128,7 +131,7 @@ const ConsentForm = () => {
                       <input
                         {...register("cookiePerformance")}
                         type="checkbox"
-                        className="rounded-md focus:ring-4 focus:ring-site-primary bg-white focus:ring-offset-0 border focus:border-transparent text-site-primary dark:text-site-primary mr-2 w-5 h-5"
+                        className="mr-2 h-5 w-5 rounded-md border bg-white text-site-primary focus:border-transparent focus:ring-4 focus:ring-site-primary focus:ring-offset-0 dark:text-site-primary"
                       />
                       <span>
                         Performance cookies{" "}
@@ -142,7 +145,7 @@ const ConsentForm = () => {
                   <input
                     type="submit"
                     value="Save settings"
-                    className="p-4 rounded-md dark:bg-black hover:dark:bg-site-primary dark:text-white hover:dark:text-white bg-white hover:bg-site-primary text-black hover:text-white mt-4 md:mt-0"
+                    className="mt-4 rounded-md bg-white p-4 text-black hover:bg-site-primary hover:text-white dark:bg-black dark:text-white hover:dark:bg-site-primary hover:dark:text-white md:mt-0"
                   />
                 </form>
               </div>

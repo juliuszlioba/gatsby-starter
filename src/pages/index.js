@@ -26,7 +26,7 @@ export default function Home() {
         <div className="text-2xl">👋 Hello world!</div>
         <div>
           <button
-            className="mt-2 py-2 px-3 rounded-md bg-gray-100 dark:bg-gray-800"
+            className="mt-2 rounded-md bg-gray-100 py-2 px-3 dark:bg-gray-800"
             onClick={() => {
               toggleTheme()
             }}
